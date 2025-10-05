@@ -16,7 +16,8 @@ export default function Home() {
   const checkHealth = async () => {
     try {
       const backendUrl =
-        process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:9000";
+        process.env.NEXT_PUBLIC_BACKEND_URL ||
+        "https://xfbodnnieh.execute-api.eu-north-1.amazonaws.com/dev/";
       const response = await fetch(`${backendUrl}/health`);
 
       if (!response.ok) {
