@@ -2,8 +2,14 @@
 
 import { useState, useEffect } from "react";
 
+interface HealthData {
+  status: string;
+  timestamp: string;
+  [key: string]: unknown;
+}
+
 export default function Home() {
-  const [healthData, setHealthData] = useState<any>(null);
+  const [healthData, setHealthData] = useState<HealthData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
