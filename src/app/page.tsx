@@ -17,7 +17,7 @@ export default function Home() {
     try {
       const backendUrl =
         process.env.NEXT_PUBLIC_BACKEND_URL ||
-        "https://xfbodnnieh.execute-api.eu-north-1.amazonaws.com/dev/";
+        "https://xfbodnnieh.execute-api.eu-north-1.amazonaws.com/dev";
       const response = await fetch(`${backendUrl}/health`);
 
       if (!response.ok) {
